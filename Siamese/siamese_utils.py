@@ -15,9 +15,9 @@ class PseudoSiamese(nn.Module):
 		self.fc1 = nn.Linear(512, 512)
 		self.dropout = nn.Dropout(p=0.2)
 		self.fc2 = nn.Linear(512, 2)
-		self.leg_a.apply(self._init_weights)
-		self.leg_b.apply(self._init_weights)
-		self.apply(init_weights)
+#		self.leg_a.apply(self._init_weights)
+#		self.leg_b.apply(self._init_weights)
+#		self.apply(init_weights)
 	def _make_siamese_leg(self):
 		def _make_vgg_block(layers=[], input_depth=1, depth=32, kernel_size=3, padding=True, max_pool=True):
 			pad = kernel_size//2 if padding else 0
@@ -58,36 +58,36 @@ class PseudoSiamese(nn.Module):
 
 
 
-class mydataset(Dataset):
-	"""
-	Arguments:
-		Path to image folder
-		Extension of images
-		PIL transforms
-	"""
-
-	def __init__(self, df, img_path, transform=None):
-	
-		tmp_df = df
-		assert tmp_df['image_name'].apply(lambda x: os.path.isfile(img_path + x )).all(), \
-"Some images referenced in the CSV file were not found"
-		
-		self.img_path = img_path
-		self.transform = transform
-
-		self.X_train = tmp_df['filenames']
-		self.y_train = tmp_df['labels']
-
-	def __getitem__(self, index):
-		img = Image.open(self.img_path + self.X_train[index])
-		img = img.convert('RGB')
-		if self.transform is not None:
-			img = self.transform(img)
-		
-		label = torch.from_numpy(self.y_train[index])
-		return img, label
-
-	def __len__(self):
-		return len(self.X_train.index)
+#class mydataset(Dataset):
+#	"""
+#	Arguments:
+#		Path to image folder
+#		Extension of images
+#		PIL transforms
+#	"""
+#
+#	def __init__(self, df, img_path, transform=None):
+#	
+#		tmp_df = df
+#		assert tmp_df['image_name'].apply(lambda x: os.path.isfile(img_path + x )).all(), \
+#"Some images referenced in the CSV file were not found"
+#		
+#		self.img_path = img_path
+#		self.transform = transform
+#
+#		self.X_train = tmp_df['filenames']
+#		self.y_train = tmp_df['labels']
+#
+#	def __getitem__(self, index):
+#		img = Image.open(self.img_path + self.X_train[index])
+#		img = img.convert('RGB')
+#		if self.transform is not None:
+#			img = self.transform(img)
+#		
+#		label = torch.from_numpy(self.y_train[index])
+#		return img, label
+#
+#	def __len__(self):
+#		return len(self.X_train.index)
 		
 		
