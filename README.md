@@ -1,2 +1,3 @@
 # Neuron-Image-Classification
-Accelerating Drug Discovery for Alzheimer’s Disease
+Deep Learning for Estimating Synaptic Health of Primary Neuronal Cell Culture.
+Accelerating Drug Discovery for Alzheimer’s Disease.
