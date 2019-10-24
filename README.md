@@ -1,6 +1,7 @@
 # Neuron-Image-Classification
-Deep Learning for Estimating Synaptic Health of Primary Neuronal Cell Culture.
-Accelerating Drug Discovery for Alzheimer’s Disease.
+
+In this work, we aim to build an end-to-end pipeline for assessing synaptic health to estimate treatment effects of Amyloid-$\beta$ compound.
+
 
 One of the models we implemented:
 ![Stacked ResNet](figures/Stacked_ResNet.jpg)
