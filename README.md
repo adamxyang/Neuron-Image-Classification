@@ -9,7 +9,7 @@ Previous work by [William Stone](https://github.com/wfbstone/Neuron-Image-Classi
 ![plate configuration](figures/plate.png)
 
 # Models
-We first tried to stack four ResNet34 together by concatenating their feature vectors:
+We first tried to stack four ResNet34 together by concatenating their feature vectors, as shown schematically below:
 ![Stacked ResNet](figures/Stacked_ResNet.jpg)
 
 
