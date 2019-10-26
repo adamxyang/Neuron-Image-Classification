@@ -1,6 +1,5 @@
 # Neuron-Image-Classification
-[![License](https://img.shields.io/badge/license-GNUv3-red)](https://github.com/faz658026/RefluxPipe/blob/master/LICENSE) 
-
+[![License](https://img.shields.io/badge/license-GNUv3-red)](https://github.com/Iron4dam/Neuron-Image-Classification/blob/master/LICENSE) 
 [![Python 3.7](https://img.shields.io/badge/python-3.7-yellow.svg)](https://www.python.org/) 
 
 # Background
