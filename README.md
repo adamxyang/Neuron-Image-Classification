@@ -1,7 +1,7 @@
 # Neuron-Image-Classification
 [![License](https://img.shields.io/badge/license-GPLv3-red)](https://github.com/Iron4dam/Neuron-Image-Classification/blob/master/LICENSE) 
 [![Python 3.7](https://img.shields.io/badge/python-3.7-yellow.svg)](https://www.python.org/) 
-[![PyTorch 1.2.0](https://img.shields.io/badge/pytorch-1.2.0-ff69b4)](https://pytorch.org) 
+[![PyTorch 1.2.0](https://img.shields.io/badge/pytorch-1.2.0-orange)](https://pytorch.org) 
 [![Torchvision 0.4.0](https://img.shields.io/badge/torchvision-0.4.0-blue)](https://pytorch.org)
 
 # Background
