@@ -7,7 +7,7 @@ from sklearn.utils import shuffle
 from torchvision import models
 import torch.nn as nn
 import time
-from utils_4 import train, evaluate, calculate_accuracy
+from train_utils_4 import train, evaluate, calculate_accuracy
 from tqdm import tqdm
 from cvtorchvision import cvtransforms
 import pickle
