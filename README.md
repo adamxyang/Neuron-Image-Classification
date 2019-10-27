@@ -1,6 +1,8 @@
 # Neuron-Image-Classification
 [![License](https://img.shields.io/badge/license-GPLv3-red)](https://github.com/Iron4dam/Neuron-Image-Classification/blob/master/LICENSE) 
 [![Python 3.7](https://img.shields.io/badge/python-3.7-yellow.svg)](https://www.python.org/) 
+[![PyTorch 1.2.0](https://img.shields.io/badge/torch-1.2.0-brightgreen)](https://pytorch.org) 
+[![Torchvision 0.4.0](https://img.shields.io/badge/torchvision-0.4.0-blue)](https://pytorch.org)
 
 # Background
 In this work, we aim to build an end-to-end pipeline to estimate treatment effects of Amyloid-β compound in neuronal cells. The pipeline can be further applied to biomedical research to efficiently identify new compounds that protect cells against the treatment of Amyloid-β with potential to discover new drugs for the Alzheimer’s disease. This is a binary classification task where we aim to classify whether neurons are treated with Amyloid-β or not, and we make inference on whether candidate compounds can bind to Amyloid-β and thus protect neurons.
