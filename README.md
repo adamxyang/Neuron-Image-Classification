@@ -15,6 +15,6 @@ We will train models using images from 33 out of 36 plates and test the model on
 We first tried to stack four ResNet34 together by concatenating their feature vectors, as shown schematically below:
 ![Stacked ResNet](figures/Stacked_ResNet.jpg)
 The reason was that each stain channel has quite distinct structures and they might require different convolutional kernels for feature extraction. Moreover, the four separate convolutional channels also serve as an ensemble method which we
-believe can improve the model’s generalisation ability. 
+believe can improve the model’s generalisation ability. This model achieved 100.00% accuracy on the test set. 
 
 # Inference
