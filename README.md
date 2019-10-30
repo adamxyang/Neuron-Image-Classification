@@ -13,7 +13,7 @@ Previous work by [William Stone](https://github.com/wfbstone/Neuron-Image-Classi
 </p>
 Example images of the four stains:
 <p align="center">
-  <img src="/figures/4_stains.png" width="800" height='300' title="plate">
+  <img src="/figures/4_stains.png" width="1000" height='300' title="plate">
 </p>
 We will train models using images from 33 out of 36 plates and test the model on the rest three plates. To train the classifier, we only use 0 and 30 μM of Aβ with 0 μM candidate compound. Then we apply the model to test whether candidate compounds have any effect. 
 
