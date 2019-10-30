@@ -9,7 +9,7 @@ In this work, we aim to build an end-to-end pipeline to estimate treatment effec
 
 Previous work by [William Stone](https://github.com/wfbstone/Neuron-Image-Classification) has shown the potential of a CNN-based classifiers on this task. He implemented a VGG19 model and achieved 97.2% test accuracy. His training and testing neuron images were taken after staining with the Cy5 dye, a biomarker for the MAP2 gene found in the Neuronal Cytoskeleton. We aim to extend his work to make the model learn from four different stains. Specifically, we stained for MAP2 (neuronal cytoskeleton marker), PSD-95 (post-synaptic protein marker), Synaptophysin (pre-synaptic protein marker) and Hoescht 33342 (nucleic marker). Cells are then imaged at 40x and 20x using the high-content IN Cell Analyzer 6000 imaging system. The images are taken at the internal 48 wells per 36 well plate (the outer wells are lost to edge effects) and obtain 30 fields of view per well for each of the four channels. Cells are pre-treated for one hour with one candidate compound in doses of either 10, 3 or 1 μM2 before the addition of 30 μM of Aβ or a vehicle control. The plate configuration is shown below.
 <p align="center">
-  <img src="/figures/plate.png" width="600" height='150' title="plate">
+  <img src="/figures/plate.png" width="600" height='200' title="plate">
 </p>
 Example images of the four stains:
 ![4 stains](figures/4_stains.png)
