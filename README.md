@@ -26,7 +26,7 @@ believe can improve the model’s generalisation ability. This model achieved 10
 
 One major downside of the above model is that it ignores possible mutual spatial information across different stains. Biologists often compare neurons at particular locations using their images from all stains. As different stains highlight different parts of neurons, they can combine the information and make a thorough conclusion. However, our S4-ResNet34 will not be able to do this because it compresses the spatial dimension in each stain channel through pooling before combining the channels. Therefore, we decided to try to stack the channels first, which make training samples RGBY-like images. A schematic diagram of the model is shown below, also with ResNet34 as backbone. This model achieved 99.17% accuracy on the test set. 
 <p align="center">
-  <img src="/figures/stacked.jpg" width="600" height='250' title="stacked">
+  <img src="/figures/stacked.jpg" width="500" height='250' title="stacked">
 </p>
 
 We also experimented other ways to learn from four channels, for example adding all pixel values to combine four channels into one channel, or adding weighted pixels from the fourth channel into the other channels to form a normal RGB image. However, none of the other methods achieved as high accuracy as the above models.
