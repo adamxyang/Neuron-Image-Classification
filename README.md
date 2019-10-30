@@ -13,14 +13,16 @@ Previous work by [William Stone](https://github.com/wfbstone/Neuron-Image-Classi
 </p>
 Example images of the four stains:
 <p align="center">
-  <img src="/figures/4_stains.png" width="1000" height='250' title="plate">
+  <img src="/figures/4_stains.png" width="1000" height='250' title="stains">
 </p>
 We will train models using images from 33 out of 36 plates and test the model on the rest three plates. To train the classifier, we only use 0 and 30 μM of Aβ with 0 μM candidate compound. Then we apply the model to test whether candidate compounds have any effect. 
 
 # Models
 We first tried to stack four ResNet34 together by concatenating their feature vectors, as shown schematically below. We name this model S4-ResNet34. Due to the high resolution of images (2048x2048) and the GPU memory (RTX 2080 Ti), the deepest convolution based model we can apply is the ResNet34, with mixed-precision training. The reason for such an architecture is that each stain channel has quite distinct structures and they might require different convolutional kernels for feature extraction. Moreover, the four separate convolutional channels also serve as an ensemble method which we
 believe can improve the model’s generalisation ability. This model achieved 100.00% accuracy on the test set. 
-![Stacked ResNet](figures/Stacked_ResNet.jpg)
+<p align="center">
+  <img src="/figures/Stacked_ResNet.jpg" width="1000" height='250' title="stains">
+</p>
 
 One major downside of the above model is that it ignores possible mutual spatial information across different stains. Biologists often compare neurons at particular locations using their images from all stains. As different stains highlight different parts of neurons, they can combine the information and make a thorough conclusion. However, our S4-ResNet34 will not be able to do this because it compresses the spatial dimension in each stain channel through pooling before combining the channels. Therefore, we decided to try to stack the channels first, which make training samples RGBY-like images. A schematic diagram of the model is shown below, also with ResNet34 as backbone. This model achieved 99.17% accuracy on the test set. 
 ![Stacked](figures/stacked.jpg)
