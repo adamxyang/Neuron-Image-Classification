@@ -21,11 +21,13 @@ We will train models using images from 33 out of 36 plates and test the model on
 We first tried to stack four ResNet34 together by concatenating their feature vectors, as shown schematically below. We name this model S4-ResNet34. Due to the high resolution of images (2048x2048) and the GPU memory (RTX 2080 Ti), the deepest convolution based model we can apply is the ResNet34, with mixed-precision training. The reason for such an architecture is that each stain channel has quite distinct structures and they might require different convolutional kernels for feature extraction. Moreover, the four separate convolutional channels also serve as an ensemble method which we
 believe can improve the model’s generalisation ability. This model achieved 100.00% accuracy on the test set. 
 <p align="center">
-  <img src="/figures/Stacked_ResNet.jpg" width="1000" height='250' title="stains">
+  <img src="/figures/Stacked_ResNet.jpg" width="1000" height='400' title="stacked_resnet">
 </p>
 
 One major downside of the above model is that it ignores possible mutual spatial information across different stains. Biologists often compare neurons at particular locations using their images from all stains. As different stains highlight different parts of neurons, they can combine the information and make a thorough conclusion. However, our S4-ResNet34 will not be able to do this because it compresses the spatial dimension in each stain channel through pooling before combining the channels. Therefore, we decided to try to stack the channels first, which make training samples RGBY-like images. A schematic diagram of the model is shown below, also with ResNet34 as backbone. This model achieved 99.17% accuracy on the test set. 
-![Stacked](figures/stacked.jpg)
+<p align="center">
+  <img src="/figures/Stacked.jpg" width="1000" height='200' title="stacked">
+</p>
 
 We also experimented other ways to learn from four channels, for example adding all pixel values to combine four channels into one channel, or adding weighted pixels from the fourth channel into the other channels to form a normal RGB image. However, none of the other methods achieved as high accuracy as the above models.
 
