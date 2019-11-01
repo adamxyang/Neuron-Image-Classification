@@ -36,7 +36,7 @@ We then applied the model to test on wells with various doses of compound and AÎ
 <p align="center">
   <img src="/figures/danazol.png" width="600" height='200' title="danazol">
 </p>
-Our results align with biologists' statistical analysis using [CellProfiler](https://cellprofiler.org). But once our model is trained, the inference time was 1000 time faster than the traditional method using CellProfiler. We also implemented GradCAM to visualise pixel-wise importance:
+Our results align with biologists' statistical analysis using [CellProfiler](https://cellprofiler.org) . But once our model is trained, the inference time was 1000 time faster than the traditional method using CellProfiler. We also implemented GradCAM to visualise pixel-wise importance:
 <p align="center">
   <img src="/figures/gradcam.png" width="600" height='600' title="gradcam">
 </p>
