@@ -34,5 +34,9 @@ We also experimented other ways to learn from four channels, for example adding 
 # Inference
 We then applied the model to test on wells with various doses of compound and Aβ. Below is an example screening of the plate with compound Danazol:
 <p align="center">
-  <img src="/figures/danazol.png" width="500" height='250' title="danazol">
+  <img src="/figures/danazol.png" width="600" height='200' title="danazol">
+</p>
+Our results align with biologists' statistical analysis using [CellProfiler](https://cellprofiler.org). But once our model is trained, the inference time was 1000 time faster than the traditional method using CellProfiler. We also implemented GradCAM to visualise pixel-wise importance:
+<p align="center">
+  <img src="/figures/gradcam.png" width="1000" height='200' title="gradcam">
 </p>
