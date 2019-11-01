@@ -32,3 +32,7 @@ One major downside of the above model is that it ignores possible mutual spatial
 We also experimented other ways to learn from four channels, for example adding all pixel values to combine four channels into one channel, or adding weighted pixels from the fourth channel into the other channels to form a normal RGB image. However, none of the other methods achieved as high accuracy as the above models.
 
 # Inference
+We then applied the model to test on wells with various doses of compound and Aβ. Below is an example screening of the plate with compound Danazol:
+<p align="center">
+  <img src="/figures/danazol.png" width="500" height='250' title="danazol">
+</p>
