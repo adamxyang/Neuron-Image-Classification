@@ -40,3 +40,5 @@ Our results align with biologists' statistical analysis using [CellProfiler](htt
 <p align="center">
   <img src="/figures/gradcam.png" width="600" height='600' title="gradcam">
 </p>
+
+Part of the project using only one Cy5 stain will be published soon. We will further add some comparison between the traditional method and our CNN-based method to the [preprint](https://arxiv.org/abs/1908.11399).
